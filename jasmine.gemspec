@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.rdoc_options       = ["--charset=UTF-8"]
 
   if ENV['RAILS_VERSION'] == 'pojs-rspec1'
-    s.add_development_dependency 'rspec', '~> 1.3.1'
+    s.add_development_dependency 'rspec', '~> 1.3.0'
     s.add_development_dependency 'rake-tasks'
     s.add_development_dependency 'rack', "1.1" if ENV["RUBY_VERSION"] =~ /1\.8\.6/
   elsif ENV['RAILS_VERSION'] == 'pojs-rspec2'
@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
     s.add_development_dependency 'rack', "1.1" if ENV["RUBY_VERSION"] =~ /1\.8\.6/
   elsif ENV['RAILS_VERSION'] == 'rails2'
     # for development & test of Rails 2 Generators
-    s.add_development_dependency 'rspec', '~> 1.3.1'
+    s.add_development_dependency 'rspec', '~> 1.3.0'
     s.add_development_dependency 'rails', '~> 2.3.10'
     s.add_development_dependency 'rack', '1.1'
   else
@@ -44,9 +44,9 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'gem-release', ">= 0.0.16"
   s.add_development_dependency 'ci_reporter'
 
-  s.add_dependency 'rack', '>= 1.1'
-  s.add_dependency 'rspec', '>= 1.3.1'
-  s.add_dependency 'json_pure', '>= 1.4.3'
-  s.add_dependency 'selenium-webdriver', '>= 0.1.3'
+  s.add_dependency 'rack'
+  s.add_dependency 'rspec'
+  s.add_dependency 'json_pure'
+  s.add_dependency 'selenium-webdriver'
 
 end
