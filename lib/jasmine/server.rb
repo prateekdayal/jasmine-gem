@@ -78,6 +78,9 @@ module Jasmine
     Rack::Builder.app do
       use Rack::Head
 
+      puts "Mounting Jammit for Assets"
+      use Jammit::Middleware
+
       map('/run.html')         { run Jasmine::Redirect.new('/') }
       map('/__suite__')        { run Jasmine::FocusedSuite.new(config) }
 
